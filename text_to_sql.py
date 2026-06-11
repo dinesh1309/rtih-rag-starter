@@ -11,7 +11,6 @@ import os, sqlite3
 from dotenv import load_dotenv
 from langchain_community.utilities import SQLDatabase
 from langchain_openai import ChatOpenAI
-from langchain.chains import create_sql_query_chain
 
 load_dotenv()  # reads OPENROUTER_API_KEY
 
@@ -45,23 +44,29 @@ llm = ChatOpenAI(
     max_tokens=512,
 )
 
-# 3. The chain: plain-English question -> SQL --------------------------------
-write_sql = create_sql_query_chain(llm, db)
+# 3. Ask: the LLM writes SQL from the schema, then we run it -----------------
+#    Direct LLM call — no extra langchain.chains import, so it just works in Colab.
+SCHEMA = db.get_table_info()
 
 
 def clean_sql(text):
-    """Pull just the SQL out of the model's reply (it may echo Question:/SQLQuery:)."""
-    s = text.strip()
-    if "SQLQuery:" in s:
-        s = s.split("SQLQuery:", 1)[1]
-    for stop in ("SQLResult:", "Answer:"):
-        if stop in s:
-            s = s.split(stop, 1)[0]
-    return s.replace("```sql", "").replace("```", "").strip()
+    """Strip markdown / prefixes so we're left with a runnable query."""
+    s = text.strip().replace("```sql", "").replace("```sqlite", "").replace("```", "")
+    for p in ("SQLQuery:", "SQLite query:", "SQL:"):
+        if p in s:
+            s = s.split(p, 1)[1]
+    return s.strip().rstrip(";").strip()
 
 
 def ask(question):
-    sql = clean_sql(write_sql.invoke({"question": question}))
+    prompt = (
+        "You are a SQLite expert. Given this database schema:\n"
+        f"{SCHEMA}\n\n"
+        "Write ONE SQLite query that answers the question. "
+        "Return ONLY the SQL — no explanation, no markdown.\n\n"
+        f"Question: {question}"
+    )
+    sql = clean_sql(llm.invoke(prompt).content)
     answer = db.run(sql)
     print(f"\nQ:   {question}\nSQL: {sql}\nA:   {answer}")
 
