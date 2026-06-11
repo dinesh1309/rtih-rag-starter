@@ -46,19 +46,45 @@ llm = ChatOpenAI(
 
 # 3. Ask: the LLM writes SQL from the schema, then we run it -----------------
 #    Direct LLM call — no extra langchain.chains import, so it just works in Colab.
+# The schema is the CREATE TABLE text (column names + types). The LLM reads this
+# so it knows what to query — without it, it would be guessing your column names.
 SCHEMA = db.get_table_info()
 
 
 def clean_sql(text):
-    """Strip markdown / prefixes so we're left with a runnable query."""
+    """Clean the LLM's reply down to a single runnable SQL statement.
+
+    LLMs often wrap their answer in markdown fences (```sql ... ```) or prefix it
+    with a label like "SQLQuery:". SQLite can't execute any of that, so we strip
+    it out and hand back bare SQL.
+
+    Args:
+        text: the raw string the model returned.
+    Returns:
+        a clean SQL string, ready to run.
+    """
+    # 1. Remove markdown code fences if the model added them.
     s = text.strip().replace("```sql", "").replace("```sqlite", "").replace("```", "")
+    # 2. Drop any leading label and keep only what comes after it.
     for p in ("SQLQuery:", "SQLite query:", "SQL:"):
         if p in s:
             s = s.split(p, 1)[1]
+    # 3. Trim whitespace and a trailing semicolon so db.run() gets clean SQL.
     return s.strip().rstrip(";").strip()
 
 
 def ask(question):
+    """Answer a plain-English question by having the LLM write, then run, SQL.
+
+    The whole text-to-SQL idea in one function:
+        question -> LLM writes SQL (using the schema) -> database runs it -> result.
+
+    Args:
+        question: a natural-language question about the data,
+                  e.g. "What is the total amount still overdue?".
+    """
+    # Hand the LLM the table schema and ask for ONLY the SQL (no chatter).
+    # The schema is what lets it write a query against the right columns.
     prompt = (
         "You are a SQLite expert. Given this database schema:\n"
         f"{SCHEMA}\n\n"
@@ -66,8 +92,8 @@ def ask(question):
         "Return ONLY the SQL — no explanation, no markdown.\n\n"
         f"Question: {question}"
     )
-    sql = clean_sql(llm.invoke(prompt).content)
-    answer = db.run(sql)
+    sql = clean_sql(llm.invoke(prompt).content)   # LLM writes the SQL; we clean it
+    answer = db.run(sql)                          # the database executes the query
     print(f"\nQ:   {question}\nSQL: {sql}\nA:   {answer}")
 
 
