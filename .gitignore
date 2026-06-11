@@ -1,0 +1,11 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+chroma/
+.chroma/
+.DS_Store
+.vercel
+# internal RTIH mentor docs — keep out of the public repo
+*.docx
+.gstack/

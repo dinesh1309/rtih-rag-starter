@@ -1,0 +1,119 @@
+=== EMAIL 1 ===
+From: site.engineer@meadowsdev.com
+To: pm@meadowsdev.com
+Date: 2026-05-08
+Subject: What the Tower B electrical inspection will cover
+
+Ahead of next week's inspection, here is what the electrical inspector checks before a completion certificate can be issued. An electrical inspection verifies that the building's wiring is safe and code-compliant. It covers: earthing and grounding of the whole installation; RCD/RCCB protection on every circuit; the integrity of the main and sub distribution boards; cable insulation-resistance testing; correct circuit labelling and load balancing; and emergency lighting and exit signage. If any item fails, the inspector withholds the completion certificate until it is fixed and re-checked.
+
+=== EMAIL 2 ===
+From: site.engineer@meadowsdev.com
+To: pm@meadowsdev.com
+Date: 2026-05-12
+Subject: Tower B - electrical inspection result
+
+The electrical inspection for Tower B was completed on May 11. The inspector flagged two issues: the basement distribution board needs additional earthing, and three units on floor 7 are missing RCD protection. We cannot get the completion certificate until both are fixed. Estimated rework time is 4 days. I have asked the contractor to start Monday.
+
+=== EMAIL 3 ===
+From: pm@meadowsdev.com
+To: client@parkviewholdings.com
+Date: 2026-05-14
+Subject: Handover timeline update - Phase 1
+
+Following the electrical re-inspection, the Tower B handover date moves from June 1 to June 8. Tower A is unaffected and remains on track for June 1. All other Phase 1 milestones are holding. We will confirm the final Tower B date once the completion certificate is issued.
+
+=== EMAIL 4 ===
+From: procurement@meadowsdev.com
+To: pm@meadowsdev.com
+Date: 2026-05-15
+Subject: Lift installation - vendor delay
+
+Otis has informed us the lift cars for Tower A will arrive two weeks late due to a customs hold at Chennai port. New delivery date is May 29. Installation takes 6 working days after delivery. This puts lift commissioning at approximately June 9. This may affect the Tower A handover - flagging now so we can plan.
+
+=== EMAIL 5 ===
+From: pm@meadowsdev.com
+To: finance@meadowsdev.com
+Date: 2026-05-16
+Subject: Budget variance - Phase 1 to date
+
+Phase 1 is currently 6.5% over the approved budget. The two largest drivers are the electrical rework on Tower B (approx 8 lakh) and additional waterproofing on the podium (approx 14 lakh) that was not in the original scope. We need a revised budget sign-off before raising the next contractor payment.
+
+=== EMAIL 6 ===
+From: client@parkviewholdings.com
+To: pm@meadowsdev.com
+Date: 2026-05-18
+Subject: Re: Handover timeline update - Phase 1
+
+Thanks for the update. June 8 for Tower B is acceptable. Please ensure the lift situation does not push Tower A past June 1 - that date is committed to our first set of buyers. Send me a confirmed lift commissioning date by end of this week.
+
+=== EMAIL 7 ===
+From: fire.consultant@meadowsdev.com
+To: pm@meadowsdev.com
+Date: 2026-05-19
+Subject: Fire NOC status - both towers
+
+The fire NOC for both Tower A and Tower B was approved by the fire department on May 17. Sprinklers and wet risers have been pressure-tested and passed. One dependency remains: the emergency lighting on Tower B is tied to the electrical re-inspection, so Tower B's fire clearance is only final once the electrical completion certificate is issued.
+
+=== EMAIL 8 ===
+From: facilities@meadowsdev.com
+To: pm@meadowsdev.com
+Date: 2026-05-21
+Subject: Tower A snagging list
+
+The Tower A snagging walk is done. We logged 18 minor snags: paint touch-ups in common corridors, two misaligned apartment doors, and a leaking kitchen tap in four units. All are cosmetic and do not affect the June 1 handover. The contractor will close them out by May 28.
+
+=== EMAIL 9 ===
+From: electrical.inspector@apinspections.gov.in
+To: pm@meadowsdev.com
+Date: 2026-05-22
+Subject: Tower B re-inspection result - PASSED
+
+The Tower B re-inspection on May 22 passed. The basement earthing and the floor 7 RCD protection have both been verified and now meet code. No further electrical issues were found. The completion certificate for Tower B will be issued on May 25.
+
+=== EMAIL 10 ===
+From: site.engineer@meadowsdev.com
+To: pm@meadowsdev.com
+Date: 2026-05-20
+Subject: Tower B - rework complete
+
+Both electrical issues on Tower B are resolved. The basement earthing was completed on May 19 and the floor 7 RCDs were installed today. Re-inspection is booked for May 22. If it passes, the completion certificate should follow within 3 working days, keeping us on track for the June 8 handover.
+
+=== EMAIL 11 ===
+From: pm@meadowsdev.com
+To: client@parkviewholdings.com
+Date: 2026-05-26
+Subject: Tower B completion certificate issued
+
+Good news - the Tower B electrical completion certificate was issued on May 25, and the fire clearance is now final as a result. Tower B is firmly confirmed for the June 8 handover. Tower A remains on June 1.
+
+=== EMAIL 12 ===
+From: procurement@meadowsdev.com
+To: pm@meadowsdev.com
+Date: 2026-05-28
+Subject: Lift commissioning - confirmed
+
+Update on the lift delay: the Otis cars cleared customs on May 27 and installation has started. Commissioning is now confirmed for June 7, one day ahead of need. This keeps the Tower A handover safe on June 1. I will share the commissioning completion report once Otis signs off.
+
+=== EMAIL 13 ===
+From: finance@meadowsdev.com
+To: pm@meadowsdev.com
+Date: 2026-05-29
+Subject: Revised budget signed off
+
+The board approved the revised Phase 1 budget, accepting the 6.5% variance. The next contractor payment is released. They have asked us to treat the podium waterproofing (approx 14 lakh) as out-of-scope and open a cost-recovery review against the original waterproofing contractor.
+
+=== EMAIL 14 ===
+From: client@parkviewholdings.com
+To: pm@meadowsdev.com
+Date: 2026-05-30
+Subject: Clubhouse and amenities handover
+
+Before our first residents move in around mid-June, we need the shared amenities ready. When will the clubhouse, the gym, and the landscaped podium be handed over? Please give me firm dates so we can schedule the move-in communications.
+
+=== EMAIL 15 ===
+From: pm@meadowsdev.com
+To: client@parkviewholdings.com
+Date: 2026-06-01
+Subject: Re: Clubhouse and amenities handover
+
+Amenities timeline: the clubhouse and gym will be ready on June 12, and the landscaped podium on June 14. Both are ahead of the mid-June move-ins. The swimming pool is the only item still pending a water-treatment clearance, and I will confirm its date separately by June 5.
