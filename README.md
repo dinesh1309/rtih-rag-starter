@@ -1,6 +1,6 @@
 # RTIH RAG Starter — Technical Track
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dinesh1309/rtih-rag-starter/blob/main/notebook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dinesh1309/rtih-rag-starter/blob/main/RAG.ipynb)
 
 **Fastest start:** click the badge above to open the notebook in Google Colab — no install, just paste your API key and run.
 
@@ -19,7 +19,7 @@ You change **two things**: the data folder, and the question. Everything else al
 ## Two ways to run it
 
 ### Option A — Google Colab (zero setup, recommended if you're not sure)
-1. Open `notebook.ipynb` in [Google Colab](https://colab.research.google.com/) (File → Upload notebook).
+1. Open `RAG.ipynb` in [Google Colab](https://colab.research.google.com/) (File → Upload notebook).
 2. Run the cells top to bottom.
 3. Paste your OpenRouter API key when asked, upload your files, edit the question.
 
