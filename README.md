@@ -113,6 +113,14 @@ Everything else (load, chunk, embed, retrieve, answer) stays identical — only 
 
 That's the whole game. If your answer comes back grounded in your own data, you've hit the bar for Friday office hours.
 
+## Structured data? Use Text-to-SQL (not RAG)
+
+If your data is **numbers in tables** (ERP, invoices, inventory) rather than documents, RAG is the wrong tool — embeddings blur exact values and retrieval can't do math. The LLM should **write a SQL query** instead.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dinesh1309/rtih-rag-starter/blob/main/text_to_sql.ipynb)
+
+`text_to_sql.py` / `text_to_sql.ipynb` — ask a plain-English question, the LLM writes the SQL, the database returns the **exact** number. Same OpenRouter LLM, different job. (We go deeper on this in a later session.)
+
 ## Troubleshooting
 
 - **402 / "requires more credits" from OpenRouter** — OpenRouter reserves credit for the *maximum* output tokens, not what you actually use. The starter caps this with `max_tokens=512`, so a tiny balance is enough. If you still hit it, lower `max_tokens` further or add a little credit.
